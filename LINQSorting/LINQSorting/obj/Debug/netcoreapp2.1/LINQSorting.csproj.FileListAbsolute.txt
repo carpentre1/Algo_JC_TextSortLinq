@@ -1,0 +1,11 @@
+C:\Users\slowpoke\Documents\GitHub\Algo_JC_TextSortLinq\LINQSorting\LINQSorting\bin\Debug\netcoreapp2.1\LINQSorting.deps.json
+C:\Users\slowpoke\Documents\GitHub\Algo_JC_TextSortLinq\LINQSorting\LINQSorting\bin\Debug\netcoreapp2.1\LINQSorting.runtimeconfig.json
+C:\Users\slowpoke\Documents\GitHub\Algo_JC_TextSortLinq\LINQSorting\LINQSorting\bin\Debug\netcoreapp2.1\LINQSorting.runtimeconfig.dev.json
+C:\Users\slowpoke\Documents\GitHub\Algo_JC_TextSortLinq\LINQSorting\LINQSorting\bin\Debug\netcoreapp2.1\LINQSorting.dll
+C:\Users\slowpoke\Documents\GitHub\Algo_JC_TextSortLinq\LINQSorting\LINQSorting\bin\Debug\netcoreapp2.1\LINQSorting.pdb
+C:\Users\slowpoke\Documents\GitHub\Algo_JC_TextSortLinq\LINQSorting\LINQSorting\obj\Debug\netcoreapp2.1\LINQSorting.csprojAssemblyReference.cache
+C:\Users\slowpoke\Documents\GitHub\Algo_JC_TextSortLinq\LINQSorting\LINQSorting\obj\Debug\netcoreapp2.1\LINQSorting.csproj.CoreCompileInputs.cache
+C:\Users\slowpoke\Documents\GitHub\Algo_JC_TextSortLinq\LINQSorting\LINQSorting\obj\Debug\netcoreapp2.1\LINQSorting.AssemblyInfoInputs.cache
+C:\Users\slowpoke\Documents\GitHub\Algo_JC_TextSortLinq\LINQSorting\LINQSorting\obj\Debug\netcoreapp2.1\LINQSorting.AssemblyInfo.cs
+C:\Users\slowpoke\Documents\GitHub\Algo_JC_TextSortLinq\LINQSorting\LINQSorting\obj\Debug\netcoreapp2.1\LINQSorting.dll
+C:\Users\slowpoke\Documents\GitHub\Algo_JC_TextSortLinq\LINQSorting\LINQSorting\obj\Debug\netcoreapp2.1\LINQSorting.pdb
