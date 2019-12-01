@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace LINQDictionary
@@ -7,16 +8,94 @@ namespace LINQDictionary
     {
         static void Main(string[] args)
         {
+            NodeRoot tree = new NodeRoot();
+
+
+
             Console.WriteLine("Hello World!");
             //read in the dictionary
             DictionarySorter.ReadLines();
             //reverse alphabetize the dictionary
-            DictionarySorter.ReverseLines();
+            //DictionarySorter.ReverseLines();
             //write to the dictionary folder with the lists of each item that starts with...
             DictionarySorter.StartsWithLetters("Z");
             DictionarySorter.StartsWithLetters("He");
             DictionarySorter.HasLetterAtPosition('e', 2);
             Console.Read();
+        }
+    }
+
+    class Node
+    {
+        string _word;
+        Dictionary<char, Node> _dict;
+
+        public Node Add(char value)
+        {
+            if(this._dict == null)
+            {
+                this._dict = new Dictionary<char, Node>();
+            }
+            Node result;
+            if(this._dict.TryGetValue(value, out result))
+            {
+                return result;
+            }
+
+            result = new Node();
+            this._dict[value] = result;
+            return result;
+        }
+
+        public Node Get(char value)
+        {
+            if(this._dict == null)
+            {
+                return null;
+            }
+            Node result;
+            if(this._dict.TryGetValue(value, out result))
+            {
+                return result;
+            }
+            return null;
+        }
+
+        public void SetWord(string word)
+        {
+            this._word = word;
+        }
+        public string GetWord()
+        {
+            return this._word;
+        }
+    }
+
+    class NodeRoot
+    {
+        Node _root = new Node();
+
+        public void AddWord(string value)
+        {
+            Node current = this._root;
+            for(int i = 0; i < value.Length; i++)
+            {
+                current = current.Add(value[i]);
+            }
+            current.SetWord(value);
+        }
+        public bool ContainsWord(string value)
+        {
+            Node current = this._root;
+            for(int i=0; i < value.Length; i++)
+            {
+                current = current.Get(value[i]);
+                if(current == null)
+                {
+                    return false;
+                }
+            }
+            return current != null && current.GetWord() != null;
         }
     }
 
@@ -32,6 +111,13 @@ namespace LINQDictionary
         public static void ReadLines()
         {
             lines = System.IO.File.ReadAllLines(filePath);
+            NodeRoot tree = new NodeRoot();
+            foreach(string line in lines)
+            {
+                tree.AddWord(line);
+                Console.WriteLine("Added " + line + " to tree.");
+            }
+
         }
         public static void ReverseLines()
         {
